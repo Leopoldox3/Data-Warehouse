@@ -66,7 +66,7 @@ Run the scripts in this order:
 
 ## Architecture
 
-![Architecture](data_arquitecture.svg)
+![Architecture](data_arquitecture.png)
 
 ## Gold Layer Model
 
