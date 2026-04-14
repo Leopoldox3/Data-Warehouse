@@ -2,21 +2,6 @@
 
 A three-layer data warehouse built on MySQL, integrating data from CRM and ERP source systems into a dimensional model ready for analytics.
 
-## Architecture
-
-```
-CRM / ERP Source Files
-        │
-        ▼
-   [ Bronze ]  →  Raw data, loaded as-is
-        │
-        ▼
-   [ Silver ]  →  Cleaned and standardized
-        │
-        ▼
-   [  Gold  ]  →  Dimensional model (dims + facts)
-```
-
 ## Project Structure
 
 ```
@@ -79,6 +64,10 @@ Run the scripts in this order:
 | CRM | `crm_cust_info`, `crm_prd_info`, `crm_sales_details` |
 | ERP | `erp_cust_az12`, `erp_loc_a101`, `erp_px_cat_g1v2` |
 
+## Architecture
+
+![Architecture](data_arquitecture.drawio)
+
 ## Gold Layer Model
 
 ```
@@ -86,5 +75,6 @@ gold.dim_customers ──┐
                      ├── gold.fact_sales
 gold.dim_products  ──┘
 ```
+
 
 For full column-level documentation see [docs/data_catalog.md](docs/data_catalog.md).
